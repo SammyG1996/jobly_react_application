@@ -24,7 +24,6 @@ const Nav = () => {
     }
     const handleLogOut = (e) => {
         e.preventDefault();
-        handleHamburgerClick();
         updatedIsLoggedIn(false);
         updateToken('');
         updateAlert('You have been succefully logged out')
@@ -166,7 +165,7 @@ const Nav = () => {
                 </li>}
 
                 {isLoggedIn && <li className='flex justify-center w-[100%] h-[70px] px-2 hover:bg-[#31C48D]'>
-                    <button onClick={handleLogOut} className='flex items-center' >
+                    <button onClick={(e)=> {handleLogOut(e); handleHamburgerClick();}} className='flex items-center' >
                         <div className='flex items-center justify-between'>
                             <MdLogout /><span className='pl-2'>Logout</span>
                         </div>
