@@ -23,7 +23,8 @@ const Nav = () => {
         })
     }
     const handleLogOut = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        handleHamburgerClick();
         updatedIsLoggedIn(false);
         updateToken('');
         updateAlert('You have been succefully logged out')
