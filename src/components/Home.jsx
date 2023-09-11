@@ -44,8 +44,11 @@ const Home = () => {
         //  The home componenent will have a slighty slower animation that the other,2 seconds instead of 1
         <div className='flex justify-center w-full h-screen bg-[#F9FCFB]'>
             {loading && 
-            <div className='h-screen w-full flex justify-center items-center'>
-                    <div className=''>
+            <div className='h-screen w-full flex justify-center mt-[30vh]'>
+                    
+                    <div className='flex flex-col items-center'>
+                    <h1 className='font-black text-[#096A2E]'>Please wait while we process your request</h1>
+                    <h2 className='font-black text-[#096A2E]'>thank you!</h2>
                         <IconContext.Provider value={{ size: '2.5rem' }}>
                             <BiLoader className='animate-spin animate-infinite animate-duration-[1500ms] animate-ease-linear animate-normal animate-fill-forwards'/>
                         </IconContext.Provider>
