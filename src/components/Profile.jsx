@@ -61,7 +61,7 @@ const Profile = () => {
                     </div>
                 </div>}
                 {!loading && <div className='flex flex-col items-center w-full h-screen animate-fade-up animate-once animate-duration-[1000ms] animate-ease-out animate-normal animate-fill-forwards'>
-                    <ProfileForm userData={userData} updateUserData={updateUserData} />
+                    {username !== 'demo' && <ProfileForm userData={userData} updateUserData={updateUserData} />}
                     <UserJobs jobApplications={jobApplications}/>
                 </div>}
 
